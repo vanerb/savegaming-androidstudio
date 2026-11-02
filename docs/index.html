@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Save Gaming · App Android</title>
+  <meta name="description" content="Save Gaming: app Android en Java para llevar un registro local de los videojuegos completados, con nota, reseña, plataforma y logros.">
+  <meta name="theme-color" content="#881515">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <img src="assets/icon.png" alt="" width="32" height="32">
+    <span>Save Gaming</span>
+  </a>
+  <nav>
+    <a href="#funciones">Funciones</a>
+    <a href="#pantallas">Pantallas</a>
+    <a href="#tecnologias">Tecnologías</a>
+    <a class="nav-cta" href="https://github.com/vanerb/SaveGaming-AndroidStudio">GitHub</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">App Android · Java · SQLite</p>
+      <h1><span class="h-small">Save</span> Gaming</h1>
+      <p class="lead">
+        Tu diario de videojuegos completados. Guarda cada título que has pasado con
+        su nota, tu reseña, la plataforma en la que lo jugaste y si conseguiste todos los logros.
+        Todo se almacena en el propio dispositivo, sin conexión.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/vanerb/SaveGaming-AndroidStudio">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          Ver el código
+        </a>
+        <a class="btn btn-ghost" href="#pantallas">Ver pantallas</a>
+      </div>
+      <p class="note">
+        Es una app nativa de Android, así que no se puede ejecutar en el navegador:
+        las pantallas de esta página están reproducidas en HTML/CSS a partir de los layouts del proyecto.
+        Para probarla, abre el proyecto en Android Studio.
+      </p>
+    </div>
+
+    <div class="hero-phone">
+      <div class="phone" aria-label="Pantalla principal de Save Gaming">
+        <div class="phone-screen">
+          <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
+          <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+          <div class="screen bg-gaming">
+            <div class="filter-row">
+              <span class="spinner">TODO ▾</span>
+            </div>
+            <div class="divider"></div>
+            <div class="game-item">
+              <img src="assets/nintendo.png" alt="">
+              <div class="gi-name">ZELDA</div>
+              <img class="gi-info" src="assets/informacion.png" alt="">
+              <div class="gi-plat">NINTENDO</div>
+            </div>
+            <div class="divider"></div>
+            <div class="game-item">
+              <img src="assets/playstation.png" alt="">
+              <div class="gi-name">GOD OF WAR</div>
+              <img class="gi-info" src="assets/informacion.png" alt="">
+              <div class="gi-plat">PLAYSTATION</div>
+            </div>
+            <div class="divider"></div>
+            <div class="game-item">
+              <img src="assets/pc.png" alt="">
+              <div class="gi-name">HOLLOW KNIGHT</div>
+              <img class="gi-info" src="assets/informacion.png" alt="">
+              <div class="gi-plat">PC</div>
+            </div>
+            <div class="divider"></div>
+            <div class="fab" aria-hidden="true">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONES -->
+  <section id="funciones" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Qué hace</p>
+      <h2>Funciones principales</h2>
+    </div>
+    <div class="features">
+      <article class="feature">
+        <div class="f-icon">＋</div>
+        <h3>Añadir juegos</h3>
+        <p>Botón flotante para registrar un juego con nombre, reseña, nota, plataforma y la casilla «Todos los logros». La nota se limita automáticamente entre 0 y 10.</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon"><img src="assets/informacion.png" alt=""></div>
+        <h3>Ficha de cada juego</h3>
+        <p>Al tocar un juego se abre su ficha con la plataforma, la reseña y la nota. Si la nota supera el 5 aparece el sello <em>Must Have</em>.</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon"><img src="assets/trophy.png" alt=""></div>
+        <h3>Logros</h3>
+        <p>Indica si has conseguido todos los logros del juego; la ficha muestra un trofeo y el texto «Tienes todos los logros de…».</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon"><img src="assets/playstation.png" alt=""></div>
+        <h3>Filtro por plataforma</h3>
+        <p>Desplegable para ver solo PlayStation, PC, Xbox, Nintendo u Otro, con un botón para quitar el filtro. Cada juego muestra el icono de su plataforma.</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon">⌕</div>
+        <h3>Búsqueda por nombre</h3>
+        <p>Desde el menú «Buscar» encuentras juegos por nombre, y la búsqueda se combina con el filtro de plataforma activo.</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon"><img src="assets/edit.png" alt=""></div>
+        <h3>Editar y eliminar</h3>
+        <p>Desde la ficha o con una pulsación larga en la lista. Antes de borrar se pide confirmación, con vibración y sonido; también hay opción «Borrar todo».</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon">⛁</div>
+        <h3>Datos locales</h3>
+        <p>La colección se guarda en una base de datos SQLite en el dispositivo: no hace falta cuenta ni conexión a Internet.</p>
+      </article>
+      <article class="feature">
+        <div class="f-icon">♪</div>
+        <h3>Feedback</h3>
+        <p>Efectos de sonido al añadir y eliminar juegos, vibración al confirmar acciones y avisos con <em>toasts</em>.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PANTALLAS -->
+  <section id="pantallas" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Así se ve</p>
+      <h2>Pantallas</h2>
+      <p class="section-sub">Recreadas a partir de los layouts XML, colores e imágenes de <code>res/</code>. Los juegos son datos de ejemplo.</p>
+    </div>
+
+    <div class="gallery">
+
+      <!-- Ficha -->
+      <figure class="shot">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
+            <div class="appbar"><span>Save Gaming</span></div>
+            <div class="screen bg-gaming dim detail">
+              <img class="d-cover" src="assets/nintendo.png" alt="">
+              <div class="d-title">ZELDA</div>
+              <div class="d-text">Una aventura enorme, lo mejor de la saga.</div>
+              <div class="d-text">NINTENDO</div>
+              <div class="d-text">Tienes todos los logros de zelda</div>
+              <div class="d-note">9.5</div>
+              <div class="d-badges">
+                <img src="assets/musthave.png" alt="Must Have">
+                <img src="assets/trophy.png" alt="Trofeo">
+              </div>
+              <div class="d-actions">
+                <img src="assets/edit.png" alt="Editar">
+                <img src="assets/back.png" alt="Volver">
+                <img src="assets/delete.png" alt="Eliminar">
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption><strong>Ficha del juego</strong>Nota, reseña, plataforma, sello Must Have y trofeo de logros.</figcaption>
+      </figure>
+
+      <!-- Añadir -->
+      <figure class="shot">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+            <div class="screen bg-gaming dim2">
+              <div class="dialog">
+                <div class="dlg-title">AÑADIR</div>
+                <div class="field">HOLLOW KNIGHT</div>
+                <div class="field">Difícil pero precioso</div>
+                <div class="field">8.5</div>
+                <div class="dlg-spinner">PC ▾</div>
+                <label class="check"><span class="box"></span>Todos los logros</label>
+                <div class="dlg-btn">AÑADIR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption><strong>Añadir juego</strong>Diálogo con nombre, reseña, nota, plataforma y logros.</figcaption>
+      </figure>
+
+      <!-- Filtro + menú -->
+      <figure class="shot">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+            <div class="screen bg-gaming">
+              <div class="menu-pop">
+                <div>Acerca de</div>
+                <div>Buscar</div>
+                <div>Borrar Todo</div>
+              </div>
+              <div class="filter-row">
+                <span class="spinner">PLAYSTATION ▾</span>
+                <img class="clear-filter" src="assets/deletefilter.png" alt="Quitar filtro">
+              </div>
+              <div class="divider"></div>
+              <div class="game-item">
+                <img src="assets/playstation.png" alt="">
+                <div class="gi-name">GOD OF WAR</div>
+                <img class="gi-info" src="assets/informacion.png" alt="">
+                <div class="gi-plat">PLAYSTATION</div>
+              </div>
+              <div class="divider"></div>
+              <div class="game-item">
+                <img src="assets/playstation.png" alt="">
+                <div class="gi-name">BLOODBORNE</div>
+                <img class="gi-info" src="assets/informacion.png" alt="">
+                <div class="gi-plat">PLAYSTATION</div>
+              </div>
+              <div class="divider"></div>
+              <div class="fab" aria-hidden="true">+</div>
+            </div>
+          </div>
+        </div>
+        <figcaption><strong>Filtro y menú</strong>Lista filtrada por plataforma y menú con Acerca de, Buscar y Borrar todo.</figcaption>
+      </figure>
+
+      <!-- Confirmar borrado -->
+      <figure class="shot">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+            <div class="screen bg-gaming dim2">
+              <div class="dialog">
+                <div class="field search">Buscar…</div>
+                <div class="dlg-row"><span class="dlg-btn small">BUSCAR</span></div>
+              </div>
+              <div class="dialog">
+                <div class="dlg-warn">¿ESTAS SEGURO DE QUE QUIERES ELIMINAR?</div>
+                <div class="dlg-row">
+                  <span class="dlg-btn small dark">SI</span>
+                  <span class="dlg-btn small dark">NO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption><strong>Buscar y confirmar</strong>Diálogo de búsqueda por nombre y aviso antes de eliminar.</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍAS -->
+  <section id="tecnologias" class="section">
+    <div class="section-head">
+      <p class="eyebrow">Cómo está hecha</p>
+      <h2>Tecnologías</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech"><strong>Java 8</strong><span>Lenguaje de la app</span></div>
+      <div class="tech"><strong>Android SDK</strong><span>minSdk 29 (Android 10) · target 32</span></div>
+      <div class="tech"><strong>SQLite</strong><span><code>SQLiteOpenHelper</code> para la colección</span></div>
+      <div class="tech"><strong>RecyclerView</strong><span>Lista de juegos con adaptador propio</span></div>
+      <div class="tech"><strong>ConstraintLayout</strong><span>Layouts XML de pantallas y diálogos</span></div>
+      <div class="tech"><strong>Material Components</strong><span>FloatingActionButton, tema rojo/negro</span></div>
+      <div class="tech"><strong>AppCompat</strong><span>ActionBar, menús y menú contextual</span></div>
+      <div class="tech"><strong>MediaPlayer y Vibrator</strong><span>Sonidos y vibración</span></div>
+      <div class="tech"><strong>Gradle</strong><span>Compilación en Android Studio</span></div>
+    </div>
+
+    <div class="run">
+      <h3>Ejecutarla en local</h3>
+      <ol>
+        <li>Clona el repositorio: <code>git clone https://github.com/vanerb/SaveGaming-AndroidStudio.git</code></li>
+        <li>Ábrelo en Android Studio y espera a que Gradle sincronice.</li>
+        <li>Conecta un dispositivo o inicia un emulador con Android 10 o superior y pulsa <strong>Run ▶</strong>.</li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img src="assets/icon.png" alt="" width="40" height="40">
+  <p>Save Gaming · Hecho por <strong>Vanesa Ribera Bautista</strong> · 2023</p>
+  <a href="https://github.com/vanerb/SaveGaming-AndroidStudio">github.com/vanerb/SaveGaming-AndroidStudio</a>
+</footer>
+
+</body>
+</html>
