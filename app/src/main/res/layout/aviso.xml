@@ -1,41 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="@color/ligthgrey">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_chip"
+        android:padding="14dp"
+        android:src="@drawable/ic_warning_24"
+        android:tint="@color/sg_accent" />
 
     <TextView
         android:id="@+id/txtaviso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿ESTAS SEGURO DE QUE QUIERES ELIMINAR?"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"
-        />
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="¿Seguro que quieres eliminar?"
+        android:textAppearance="@style/SaveGaming.DialogTitle" />
 
-    <Button
-        android:id="@+id/btsi"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:text="Si"
-        app:layout_constraintEnd_toStartOf="@+id/btno"
-        app:layout_constraintTop_toBottomOf="@+id/txtaviso"
-        android:backgroundTint="@color/red"/>
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="Esta acción no se puede deshacer."
+        android:textColor="@color/sg_text_secondary"
+        android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/btno"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtaviso"
-        android:backgroundTint="@color/red"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btno"
+            style="@style/SaveGaming.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:text="Cancelar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btsi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:text="Eliminar" />
+    </LinearLayout>
+
+</LinearLayout>

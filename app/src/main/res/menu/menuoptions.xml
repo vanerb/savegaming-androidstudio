@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-
-        android:id="@+id/acercade"
-        android:title="Acerca de" />
     <item
         android:id="@+id/bt_buscar"
-        android:title="Buscar" />
+        android:icon="@drawable/ic_search_24"
+        android:title="Buscar"
+        app:iconTint="@color/sg_text"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/acercade"
+        android:title="Acerca de" />
     <item
         android:id="@+id/borrartodo"
         android:title="Borrar Todo" />

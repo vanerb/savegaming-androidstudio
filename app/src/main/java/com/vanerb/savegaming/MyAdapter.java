@@ -113,7 +113,7 @@ public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
                 break;
         }
 
-        viewHolder.getImageview().setImageResource(R.drawable.informacion);
+        viewHolder.getImageview().setImageResource(R.drawable.ic_chevron_right_24);
     }
 
 

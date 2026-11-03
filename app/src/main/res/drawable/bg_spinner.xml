@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Desplegable tipo "pill": borde gris, fondo oscuro y flecha a la derecha -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sg_surface_high" />
+            <stroke android:width="1dp" android:color="@color/sg_outline" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+    <item
+        android:width="24dp"
+        android:height="24dp"
+        android:end="12dp"
+        android:gravity="center_vertical|end">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="@color/sg_accent"
+                android:pathData="M7,10l5,5 5,-5z" />
+        </vector>
+    </item>
+</layer-list>

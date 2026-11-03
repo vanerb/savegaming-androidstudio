@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fondo original oscurecido para que el contenido destaque -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/backgroundgaming" />
+    <item android:drawable="@color/sg_scrim" />
+</layer-list>

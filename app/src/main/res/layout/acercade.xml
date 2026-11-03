@@ -1,59 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="@color/grey">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="Logo de Save Gaming"
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/acercadetxttitlulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Acerca De"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="12dp"
+        android:text="Acerca de"
+        android:textAppearance="@style/SaveGaming.DialogTitle" />
 
     <TextView
         android:id="@+id/acercadedescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:text="El proposito de esta aplicacion es tener un listado de juegos que  ha pasado el usuario y poder hacer una reseña/opinion del juego. Esta aplicacion tiene como objetivo que los usuarios que han completado varios juegos acordarse de todos ellos y tambien mostrar si los logros han sido completados."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acercadetxttitlulo"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="El propósito de esta aplicación es tener un listado de los juegos que ha pasado el usuario y poder hacer una reseña u opinión de cada uno. Su objetivo es que quienes han completado varios juegos puedan recordarlos todos y mostrar también si han conseguido todos los logros."
+        android:textColor="@color/sg_text_secondary"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="14dp"
+        android:background="@color/sg_outline" />
 
     <TextView
         android:id="@+id/txtnombreacercade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
         android:text="Hecho por: Vanesa Ribera Bautista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acercadedescripcion"
-        android:textColor="@color/white"/>
+        android:textColor="@color/sg_text"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/acercadeany"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="2dp"
         android:text="Año: 2023"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnombreacercade"
-        android:textColor="@color/white"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@color/sg_accent"
+        android:textSize="13sp" />
+
+</LinearLayout>

@@ -14,4 +14,16 @@
     <color name="red">#881515</color>
     <color name="lightred">#AC1D1D</color>
     <color name="softred">#99581717</color>
+
+    <!-- Paleta del rediseño (rojo y negro) -->
+    <color name="sg_accent">#E32626</color>
+    <color name="sg_background">#0B0B0C</color>
+    <color name="sg_surface">#E6151517</color>
+    <color name="sg_surface_solid">#151517</color>
+    <color name="sg_surface_high">#1F1F23</color>
+    <color name="sg_outline">#2E2E33</color>
+    <color name="sg_text">#F3F3F3</color>
+    <color name="sg_text_secondary">#A6A6AD</color>
+    <color name="sg_red_container">#3A1012</color>
+    <color name="sg_scrim">#D90B0B0C</color>
 </resources>

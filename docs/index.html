@@ -55,39 +55,41 @@
 
     <div class="hero-phone">
       <div class="phone" aria-label="Pantalla principal de Save Gaming">
-        <div class="phone-screen">
-          <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
-          <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
-          <div class="screen bg-gaming">
-            <div class="filter-row">
-              <span class="spinner">TODO ▾</span>
+          <div class="phone-screen">
+            <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="ab-actions"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><svg viewBox="0 0 24 24"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></span></div>
+            <div class="screen bg-gaming">
+              <div class="list-head">
+                <div class="overline">TU COLECCIÓN</div>
+                <div class="lh-title">Juegos completados</div>
+                <div class="filter-row"><span class="spinner">TODO</span></div>
+              </div>
+              <div class="list">
+              <div class="game-card">
+                <span class="gc-tile"><img src="assets/nintendo.png" alt=""></span>
+                <span class="gc-body"><span class="gc-name">ZELDA</span><span class="chip">NINTENDO</span></span>
+                <span class="gc-chev"><svg viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></span>
+              </div>
+              <div class="game-card">
+                <span class="gc-tile"><img src="assets/playstation.png" alt=""></span>
+                <span class="gc-body"><span class="gc-name">GOD OF WAR</span><span class="chip">PLAYSTATION</span></span>
+                <span class="gc-chev"><svg viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></span>
+              </div>
+              <div class="game-card">
+                <span class="gc-tile"><img src="assets/pc.png" alt=""></span>
+                <span class="gc-body"><span class="gc-name">HOLLOW KNIGHT</span><span class="chip">PC</span></span>
+                <span class="gc-chev"><svg viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></span>
+              </div>
+              <div class="game-card">
+                <span class="gc-tile"><img src="assets/xbox.png" alt=""></span>
+                <span class="gc-body"><span class="gc-name">HALO</span><span class="chip">XBOX</span></span>
+                <span class="gc-chev"><svg viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></span>
+              </div>
+              </div>
+              <div class="fab" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
             </div>
-            <div class="divider"></div>
-            <div class="game-item">
-              <img src="assets/nintendo.png" alt="">
-              <div class="gi-name">ZELDA</div>
-              <img class="gi-info" src="assets/informacion.png" alt="">
-              <div class="gi-plat">NINTENDO</div>
-            </div>
-            <div class="divider"></div>
-            <div class="game-item">
-              <img src="assets/playstation.png" alt="">
-              <div class="gi-name">GOD OF WAR</div>
-              <img class="gi-info" src="assets/informacion.png" alt="">
-              <div class="gi-plat">PLAYSTATION</div>
-            </div>
-            <div class="divider"></div>
-            <div class="game-item">
-              <img src="assets/pc.png" alt="">
-              <div class="gi-name">HOLLOW KNIGHT</div>
-              <img class="gi-info" src="assets/informacion.png" alt="">
-              <div class="gi-plat">PC</div>
-            </div>
-            <div class="divider"></div>
-            <div class="fab" aria-hidden="true">+</div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -121,7 +123,7 @@
       <article class="feature">
         <div class="f-icon">⌕</div>
         <h3>Búsqueda por nombre</h3>
-        <p>Desde el menú «Buscar» encuentras juegos por nombre, y la búsqueda se combina con el filtro de plataforma activo.</p>
+        <p>Con la lupa de la barra superior encuentras juegos por nombre, y la búsqueda se combina con el filtro de plataforma activo.</p>
       </article>
       <article class="feature">
         <div class="f-icon"><img src="assets/edit.png" alt=""></div>
@@ -151,116 +153,110 @@
 
     <div class="gallery">
 
-      <!-- Ficha -->
       <figure class="shot">
         <div class="phone">
           <div class="phone-screen">
             <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
             <div class="appbar"><span>Save Gaming</span></div>
-            <div class="screen bg-gaming dim detail">
-              <img class="d-cover" src="assets/nintendo.png" alt="">
+            <div class="screen bg-gaming detail">
+              <div class="d-cover"><img src="assets/nintendo.png" alt=""></div>
               <div class="d-title">ZELDA</div>
-              <div class="d-text">Una aventura enorme, lo mejor de la saga.</div>
-              <div class="d-text">NINTENDO</div>
-              <div class="d-text">Tienes todos los logros de zelda</div>
-              <div class="d-note">9.5</div>
-              <div class="d-badges">
+              <span class="chip">NINTENDO</span>
+              <div class="d-card d-row">
+                <div><div class="overline">NOTA</div><div class="d-note">9.5<small> / 10</small></div></div>
                 <img src="assets/musthave.png" alt="Must Have">
+              </div>
+              <div class="d-card d-row start">
                 <img src="assets/trophy.png" alt="Trofeo">
+                <div><div class="overline">LOGROS</div><div class="d-text">Tienes todos los logros de zelda</div></div>
               </div>
-              <div class="d-actions">
-                <img src="assets/edit.png" alt="Editar">
-                <img src="assets/back.png" alt="Volver">
-                <img src="assets/delete.png" alt="Eliminar">
+              <div class="d-card">
+                <div class="overline">RESEÑA</div><div class="d-text">Una aventura enorme, lo mejor de la saga.</div>
               </div>
+            </div>
+            <div class="d-actions">
+              <span><i><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></i>Volver</span><span><i><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></i>Editar</span><span><i class="red"><svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></i>Eliminar</span>
             </div>
           </div>
         </div>
-        <figcaption><strong>Ficha del juego</strong>Nota, reseña, plataforma, sello Must Have y trofeo de logros.</figcaption>
+        <figcaption><strong>Ficha del juego</strong>Nota, sello Must Have, logros, reseña y acciones.</figcaption>
       </figure>
 
-      <!-- Añadir -->
       <figure class="shot">
         <div class="phone">
           <div class="phone-screen">
             <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
-            <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="ab-actions"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><svg viewBox="0 0 24 24"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></span></div>
             <div class="screen bg-gaming dim2">
               <div class="dialog">
-                <div class="dlg-title">AÑADIR</div>
-                <div class="field">HOLLOW KNIGHT</div>
-                <div class="field">Difícil pero precioso</div>
-                <div class="field">8.5</div>
-                <div class="dlg-spinner">PC ▾</div>
-                <label class="check"><span class="box"></span>Todos los logros</label>
+                <div class="overline">NUEVO JUEGO</div>
+                <div class="dlg-title">Añadir a la colección</div>
+                <div class="field"><span class="f-label">Nombre</span>HOLLOW KNIGHT</div>
+                <div class="field"><span class="f-label">Reseña</span>Difícil pero precioso</div>
+                <div class="field empty">Nota (0 - 10)</div>
+                <div class="f-caption">Plataforma</div>
+                <div class="spinner full">PC</div>
+                <label class="check"><span class="box"></span>Todos los logros conseguidos</label>
                 <div class="dlg-btn">AÑADIR</div>
               </div>
             </div>
           </div>
         </div>
-        <figcaption><strong>Añadir juego</strong>Diálogo con nombre, reseña, nota, plataforma y logros.</figcaption>
+        <figcaption><strong>Añadir juego</strong>Formulario con nombre, reseña, nota, plataforma y logros.</figcaption>
       </figure>
 
-      <!-- Filtro + menú -->
       <figure class="shot">
         <div class="phone">
           <div class="phone-screen">
             <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
-            <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="ab-actions"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><svg viewBox="0 0 24 24"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></span></div>
             <div class="screen bg-gaming">
-              <div class="menu-pop">
-                <div>Acerca de</div>
-                <div>Buscar</div>
-                <div>Borrar Todo</div>
+              <div class="menu-pop"><div>Acerca de</div><div>Borrar Todo</div></div>
+              <div class="list-head">
+                <div class="overline">TU COLECCIÓN</div>
+                <div class="lh-title">Juegos completados</div>
+                <div class="filter-row"><span class="spinner">PLAYSTATION</span><span class="clear-filter"><svg viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></div>
               </div>
-              <div class="filter-row">
-                <span class="spinner">PLAYSTATION ▾</span>
-                <img class="clear-filter" src="assets/deletefilter.png" alt="Quitar filtro">
+              <div class="list">
+              <div class="game-card">
+                <span class="gc-tile"><img src="assets/playstation.png" alt=""></span>
+                <span class="gc-body"><span class="gc-name">GOD OF WAR</span><span class="chip">PLAYSTATION</span></span>
+                <span class="gc-chev"><svg viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></span>
               </div>
-              <div class="divider"></div>
-              <div class="game-item">
-                <img src="assets/playstation.png" alt="">
-                <div class="gi-name">GOD OF WAR</div>
-                <img class="gi-info" src="assets/informacion.png" alt="">
-                <div class="gi-plat">PLAYSTATION</div>
+              <div class="game-card">
+                <span class="gc-tile"><img src="assets/playstation.png" alt=""></span>
+                <span class="gc-body"><span class="gc-name">BLOODBORNE</span><span class="chip">PLAYSTATION</span></span>
+                <span class="gc-chev"><svg viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></span>
               </div>
-              <div class="divider"></div>
-              <div class="game-item">
-                <img src="assets/playstation.png" alt="">
-                <div class="gi-name">BLOODBORNE</div>
-                <img class="gi-info" src="assets/informacion.png" alt="">
-                <div class="gi-plat">PLAYSTATION</div>
               </div>
-              <div class="divider"></div>
-              <div class="fab" aria-hidden="true">+</div>
+              <div class="fab" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
             </div>
           </div>
         </div>
-        <figcaption><strong>Filtro y menú</strong>Lista filtrada por plataforma y menú con Acerca de, Buscar y Borrar todo.</figcaption>
+        <figcaption><strong>Filtro y menú</strong>Filtro por plataforma, botón para quitarlo, búsqueda en la barra y menú.</figcaption>
       </figure>
 
-      <!-- Confirmar borrado -->
       <figure class="shot">
         <div class="phone">
           <div class="phone-screen">
             <div class="statusbar"><span>12:00</span><span class="sb-icons">▲ ◼</span></div>
-            <div class="appbar"><span>Save Gaming</span><span class="kebab" aria-hidden="true">⋮</span></div>
+            <div class="appbar"><span>Save Gaming</span><span class="ab-actions"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><svg viewBox="0 0 24 24"><path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></span></div>
             <div class="screen bg-gaming dim2">
               <div class="dialog">
-                <div class="field search">Buscar…</div>
-                <div class="dlg-row"><span class="dlg-btn small">BUSCAR</span></div>
+                <div class="dlg-title">Buscar juego</div>
+                <div class="field empty search"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>Nombre del juego</div>
+                <div class="dlg-btn">BUSCAR</div>
               </div>
-              <div class="dialog">
-                <div class="dlg-warn">¿ESTAS SEGURO DE QUE QUIERES ELIMINAR?</div>
-                <div class="dlg-row">
-                  <span class="dlg-btn small dark">SI</span>
-                  <span class="dlg-btn small dark">NO</span>
-                </div>
+              <div class="dialog center">
+                <span class="warn"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></span>
+                <div class="dlg-title">¿Seguro que quieres eliminar?</div>
+                <div class="dlg-sub">Esta acción no se puede deshacer.</div>
+                <div class="dlg-row"><span class="dlg-btn ghost">CANCELAR</span><span class="dlg-btn">ELIMINAR</span></div>
               </div>
             </div>
           </div>
         </div>
-        <figcaption><strong>Buscar y confirmar</strong>Diálogo de búsqueda por nombre y aviso antes de eliminar.</figcaption>
+        <figcaption><strong>Buscar y confirmar</strong>Búsqueda por nombre y aviso antes de eliminar.</figcaption>
       </figure>
 
     </div>
@@ -278,7 +274,7 @@
       <div class="tech"><strong>SQLite</strong><span><code>SQLiteOpenHelper</code> para la colección</span></div>
       <div class="tech"><strong>RecyclerView</strong><span>Lista de juegos con adaptador propio</span></div>
       <div class="tech"><strong>ConstraintLayout</strong><span>Layouts XML de pantallas y diálogos</span></div>
-      <div class="tech"><strong>Material Components</strong><span>FloatingActionButton, tema rojo/negro</span></div>
+      <div class="tech"><strong>Material Components</strong><span>Tarjetas, campos de texto, botones y FAB</span></div>
       <div class="tech"><strong>AppCompat</strong><span>ActionBar, menús y menú contextual</span></div>
       <div class="tech"><strong>MediaPlayer y Vibrator</strong><span>Sonidos y vibración</span></div>
       <div class="tech"><strong>Gradle</strong><span>Compilación en Android Studio</span></div>

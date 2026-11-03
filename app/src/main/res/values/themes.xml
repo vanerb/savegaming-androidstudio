@@ -1,52 +1,127 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.GameSave" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryVariant">@color/lightred</item>
+    <!-- Tema base oscuro: negro con acentos rojos -->
+    <style name="Theme.GameSave" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/lightred</item>
+        <item name="colorPrimaryVariant">@color/red</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondary">@color/sg_accent</item>
         <item name="colorSecondaryVariant">@color/lightred</item>
         <item name="colorOnSecondary">@color/white</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/white</item>
-        <item name="android:itemBackground">@color/lightred</item>
-
-
+        <item name="colorSurface">@color/sg_surface_solid</item>
+        <item name="colorOnSurface">@color/sg_text</item>
+        <item name="colorControlNormal">@color/sg_text_secondary</item>
+        <item name="colorControlActivated">@color/sg_accent</item>
+        <item name="android:colorBackground">@color/sg_background</item>
+        <item name="android:windowBackground">@color/sg_background</item>
+        <item name="android:textColorPrimary">@color/sg_text</item>
+        <item name="android:textColorSecondary">@color/sg_text_secondary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/sg_background</item>
+        <item name="android:navigationBarColor">@color/sg_background</item>
+        <item name="actionBarStyle">@style/SaveGaming.ActionBar</item>
+        <item name="android:dialogTheme">@style/SaveGaming.Dialog</item>
+        <item name="popupMenuStyle">@style/SaveGaming.PopupMenu</item>
+        <item name="android:contextPopupMenuStyle">@style/SaveGaming.PopupMenu</item>
+        <item name="android:spinnerStyle">@style/SaveGaming.Spinner</item>
+        <item name="spinnerStyle">@style/SaveGaming.Spinner</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SaveGaming.SpinnerDropDown</item>
+        <item name="checkboxStyle">@style/SaveGaming.CheckBox</item>
+        <item name="materialButtonStyle">@style/SaveGaming.Button</item>
     </style>
 
-    <style name="Theme.bar" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red</item>
-        <item name="colorPrimaryVariant">@color/lightred</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/red</item>
-        <item name="colorSecondaryVariant">@color/lightred</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/white</item>
-        <item name="android:actionMenuTextColor">@color/red</item>
+    <!-- Tema usado en el manifest -->
+    <style name="Theme.bar" parent="Theme.GameSave" />
 
-        <item name="android:itemBackground">@color/lightred</item>
-
-
-    </style>
-    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorControlNormal">@color/red</item>
-        <item name="colorControlActivated">@color/lightred</item>
-        <item name="colorControlHighlight">@color/lightred</item>
+    <style name="SaveGaming.ActionBar" parent="Widget.MaterialComponents.ActionBar.Solid">
+        <item name="background">@color/sg_background</item>
+        <item name="elevation">0dp</item>
+        <item name="titleTextStyle">@style/SaveGaming.ActionBar.Title</item>
     </style>
 
-    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
-        <item name="android:paddingStart">0dp</item>
-        <item name="android:paddingEnd">0dp</item>
+    <style name="SaveGaming.ActionBar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/sg_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Diálogos creados con new Dialog(context): ventana transparente y tarjeta redondeada -->
+    <style name="SaveGaming.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">88%</item>
+        <item name="android:windowMinWidthMinor">88%</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="colorPrimary">@color/lightred</item>
+        <item name="colorSecondary">@color/sg_accent</item>
+        <item name="colorControlActivated">@color/sg_accent</item>
+        <item name="colorSurface">@color/sg_surface_solid</item>
+        <item name="colorOnSurface">@color/sg_text</item>
+        <item name="android:textColorPrimary">@color/sg_text</item>
+        <item name="android:textColorSecondary">@color/sg_text_secondary</item>
+        <item name="android:spinnerStyle">@style/SaveGaming.Spinner</item>
+        <item name="spinnerStyle">@style/SaveGaming.Spinner</item>
+        <item name="checkboxStyle">@style/SaveGaming.CheckBox</item>
+        <item name="materialButtonStyle">@style/SaveGaming.Button</item>
+        <item name="textInputStyle">@style/SaveGaming.TextInput</item>
+    </style>
+
+    <style name="SaveGaming.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_popup</item>
+    </style>
+
+    <style name="SaveGaming.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:popupBackground">@drawable/bg_popup</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">40dp</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="android:dropDownVerticalOffset">48dp</item>
+    </style>
+
+    <style name="SaveGaming.SpinnerDropDown" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/sg_text</item>
+        <item name="android:paddingStart">16dp</item>
+    </style>
+
+    <style name="SaveGaming.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/sg_accent</item>
+        <item name="android:textColor">@color/sg_text</item>
+    </style>
+
+    <style name="SaveGaming.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/lightred</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:backgroundTint">@color/lightred</item>
-        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SaveGaming.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/sg_text</item>
+        <item name="strokeColor">@color/sg_outline</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SaveGaming.TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/sg_accent</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="hintTextColor">@color/sg_accent</item>
+        <item name="android:textColorHint">@color/sg_text_secondary</item>
+    </style>
+
+    <style name="SaveGaming.DialogTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/sg_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SaveGaming.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:textColor">@color/sg_accent</item>
+        <item name="android:letterSpacing">0.14</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

@@ -4,62 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/backgroundgaming"
+    android:background="@drawable/bg_screen"
+    tools:context=".MainActivity">
 
-    >
-
-
-    <ImageView
-        android:id="@+id/deletefilterbt"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/filterplatform"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/deletefilter" />
-
-    <Spinner
-        android:id="@+id/filterplatform"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/txtcoleccion"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:entries="@array/filtroplataformas"
-        android:theme="@style/Spinner"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="TU COLECCIÓN"
+        android:textAppearance="@style/SaveGaming.Overline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txtcolecciontitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Juegos completados"
+        android:textColor="@color/sg_text"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcoleccion" />
+
+    <Spinner
+        android:id="@+id/filterplatform"
+        style="@style/SaveGaming.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:entries="@array/filtroplataformas"
+        android:minWidth="170dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcolecciontitulo" />
+
+    <ImageView
+        android:id="@+id/deletefilterbt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_chip"
+        android:contentDescription="Quitar filtro"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filterplatform"
+        app:layout_constraintStart_toEndOf="@+id/filterplatform"
+        app:layout_constraintTop_toTopOf="@+id/filterplatform"
+        app:srcCompat="@drawable/ic_close_24"
+        app:tint="@color/sg_accent" />
+
     <View
         android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="10dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#FFFFFF"
-
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/sg_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/filterplatform" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btaddmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/submit"
-        app:backgroundTint="@color/red"
+        android:layout_margin="20dp"
+        android:contentDescription="Añadir juego"
+        app:backgroundTint="@color/lightred"
+        app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_circle_24" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:paddingBottom="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        />
+        app:srcCompat="@drawable/ic_add_24"
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
