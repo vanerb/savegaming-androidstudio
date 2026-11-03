@@ -127,8 +127,8 @@
 
                     <ImageView
                         android:id="@+id/musthave"
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:contentDescription="Must Have"
                         app:srcCompat="@drawable/game1" />
                 </LinearLayout>
@@ -154,8 +154,8 @@
 
                     <ImageView
                         android:id="@+id/imglogro"
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:contentDescription="Logros"
                         app:srcCompat="@drawable/trophy" />
 
