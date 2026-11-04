@@ -83,7 +83,7 @@ Para ejecutar el proyecto se necesita:
 ### Clonar el proyecto
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/vanerb/savegaming-androidstudio.git
 ```
 
 Después:
@@ -94,6 +94,10 @@ Después:
 4. Esperar a que Gradle sincronice las dependencias.
 5. Conectar un dispositivo Android o iniciar un emulador.
 6. Ejecutar el proyecto mediante **Run ▶**.
+
+### Datos de prueba (opcional)
+
+La app guarda los juegos en una base SQLite local (`juego.db`) y no tiene cuentas de usuario, así que no hay contraseña. [`database/savegaming_prueba.sql`](database/savegaming_prueba.sql) añade cinco juegos de ejemplo: con la app abierta en el emulador, ejecuta su contenido desde **App Inspection → Database Inspector** en Android Studio.
 
 ## 📱 Compatibilidad
 
