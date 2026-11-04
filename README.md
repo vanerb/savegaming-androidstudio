@@ -6,7 +6,7 @@ La aplicación está pensada para llevar un registro de los videojuegos jugados,
 
 ## 🌐 Demo
 
-Página de presentación: **https://vanerb.github.io/SaveGaming-AndroidStudio/**
+Página de presentación: **https://vanerb.github.io/savegaming-androidstudio/**
 
 Al ser una app nativa de Android no se puede ejecutar en el navegador; la página muestra sus funciones y recrea sus pantallas principales. Para probar la app, sigue los pasos de [Instalación](#-instalación).
 
