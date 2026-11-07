@@ -1,138 +1,71 @@
-# 🎮 VideoGame Tracker
+# Save Gaming
 
-Aplicación Android desarrollada con **Java** y **Android Studio** que permite gestionar de forma local una colección personal de videojuegos que hemos ido jugando a lo largo del tiempo.
+Diario de videojuegos para Android: cada vez que terminas un juego, guarda tu nota, tu reseña, la plataforma y si conseguiste todos los logros. Todo se queda en el móvil, sin cuenta ni conexión a Internet.
 
-La aplicación está pensada para llevar un registro de los videojuegos jugados, permitiendo guardar información sobre cada título, añadir valoraciones y reseñas, buscar juegos y filtrar la colección de diferentes formas.
+**[Ver la página del proyecto](https://vanerb.github.io/savegaming-androidstudio/)**: como es una app nativa, no se puede ejecutar en el navegador; la página muestra sus funciones y recrea sus pantallas.
 
-## 🌐 Demo
+**Stack:** Java · Android SDK (Android 10 o superior) · XML · SQLite
 
-Página de presentación: **https://vanerb.github.io/savegaming-androidstudio/**
+## Qué puedes hacer
 
-Al ser una app nativa de Android no se puede ejecutar en el navegador; la página muestra sus funciones y recrea sus pantallas principales. Para probar la app, sigue los pasos de [Instalación](#-instalación).
+- **Registrar juegos:** nombre, reseña, plataforma, nota del 0 al 10 y si tiene el platino (todos los logros).
+- **Insignia Must Have:** los juegos con más de un 5 la reciben en su ficha.
+- **Buscar y filtrar:** por nombre y por plataforma (PlayStation, PC, Xbox, Nintendo u otra).
+- **Editar y borrar:** cambiar cualquier dato de un juego o eliminarlo.
 
-## 📱 Características
+## Demo
 
-* 🎮 **Gestión de videojuegos**
+La [página del proyecto](https://vanerb.github.io/savegaming-androidstudio/) recrea las pantallas principales de la app. Para usarla de verdad hay que instalarla en un móvil o un emulador, como se explica en [Puesta en marcha](#puesta-en-marcha). No tiene cuentas, así que no hace falta contraseña.
 
-  * Añadir nuevos videojuegos.
-  * Editar la información de los juegos.
-  * Eliminar videojuegos.
-  * Consultar los detalles de cada título.
+## Cómo está construido
 
-* ⭐ **Valoraciones**
-
-  * Puntuar cada videojuego.
-  * Añadir reseñas y opiniones personales.
-
-* 🔎 **Búsqueda**
-
-  * Buscar videojuegos rápidamente por su nombre.
-
-* 💾 **Almacenamiento local**
-
-  * Los videojuegos se almacenan localmente en el dispositivo.
-  * No es necesario disponer de conexión a Internet para consultar o gestionar la colección.
-
-* ✏️ **Edición**
-
-  * Modificar la información de los videojuegos guardados.
-  * Actualizar la valoración y reseña cuando sea necesario.
-
-## 🛠️ Tecnologías utilizadas
-
-* **Java**
-* **Android Studio**
-* **Android SDK**
-* **XML** para el diseño de las interfaces
-* **Base de datos local** para almacenar la información de los videojuegos
-
-
-## 🎯 Funcionamiento
-
-La aplicación permite crear una colección personal de videojuegos. Para cada juego se puede almacenar información relevante y mantener un registro de la experiencia del usuario.
-
-El flujo principal de la aplicación es:
-
-```text
-Añadir videojuego
-       ↓
-Guardar en la base de datos local
-       ↓
-Consultar colección
-       ↓
-Buscar / Filtrar
-       ↓
-Ver detalles
-       ↓
-Editar información
-       ↓
-Actualizar valoración o reseña
+```mermaid
+flowchart LR
+    A[MainActivity<br/>lista, búsqueda y filtros] --> B[MyAdapter<br/>lista y operaciones]
+    A --> C[masinfo<br/>ficha del juego]
+    B --> D[MySql<br/>SQLiteOpenHelper]
+    D --> E[(juego.db<br/>en el dispositivo)]
 ```
 
-## 🚀 Instalación
+```text
+app/src/main/java/com/vanerb/savegaming/   Actividades, adaptador de la lista y acceso a SQLite
+app/src/main/res/                           Pantallas en XML, iconos y textos
+database/                                   Juegos de ejemplo
+docs/                                       Página del proyecto en GitHub Pages
+```
 
-### Requisitos
+## Decisiones técnicas
 
-Para ejecutar el proyecto se necesita:
+- **Sin servidor ni cuenta.** Los juegos se guardan en una base SQLite del propio dispositivo (`juego.db`), así que la app funciona sin conexión y nadie más ve tus datos.
+- **Una sola tabla.** `Game` guarda nombre, reseña, plataforma, platino y nota; la búsqueda y los filtros se resuelven con consultas sobre ella.
+- **Interfaz nativa.** Las pantallas están hechas en XML con componentes de Material Design.
 
-* **Android Studio**
-* **JDK compatible con la versión del proyecto**
-* **Android SDK**
-* Un dispositivo Android físico o un emulador.
+## Puesta en marcha
 
-### Clonar el proyecto
+Necesitas Android Studio con el SDK de Android y un móvil o un emulador con Android 10 o superior.
 
 ```bash
 git clone https://github.com/vanerb/savegaming-androidstudio.git
 ```
 
-Después:
+1. En Android Studio, elige **Open** y selecciona la carpeta del proyecto.
+2. Espera a que Gradle sincronice las dependencias.
+3. Conecta un móvil o inicia un emulador.
+4. Pulsa **Run ▶**.
 
-1. Abrir **Android Studio**.
-2. Seleccionar **Open**.
-3. Seleccionar la carpeta del proyecto.
-4. Esperar a que Gradle sincronice las dependencias.
-5. Conectar un dispositivo Android o iniciar un emulador.
-6. Ejecutar el proyecto mediante **Run ▶**.
+### Datos de prueba
 
-### Datos de prueba (opcional)
+[`database/savegaming_prueba.sql`](database/savegaming_prueba.sql) añade cinco juegos de ejemplo. Con la app abierta en el emulador, ejecuta su contenido desde **App Inspection → Database Inspector** en Android Studio.
 
-La app guarda los juegos en una base SQLite local (`juego.db`) y no tiene cuentas de usuario, así que no hay contraseña. [`database/savegaming_prueba.sql`](database/savegaming_prueba.sql) añade cinco juegos de ejemplo: con la app abierta en el emulador, ejecuta su contenido desde **App Inspection → Database Inspector** en Android Studio.
+## Tests
 
-## 📱 Compatibilidad
+No tiene tests automáticos.
 
-La aplicación está desarrollada para dispositivos Android y utiliza las herramientas proporcionadas por el SDK de Android.
+## Limitaciones conocidas
 
-La versión mínima de Android dependerá de la configuración definida en el proyecto.
+- Los datos solo existen en el dispositivo: no hay copia de seguridad ni sincronización.
+- Las consultas a SQLite se construyen concatenando texto, así que un nombre con apóstrofo (por ejemplo, *Baldur's Gate*) da error al guardarse.
 
-## 🎓 Objetivo del proyecto
+## Autoría
 
-Este proyecto tiene como objetivo desarrollar una aplicación móvil capaz de gestionar una colección personal de videojuegos mediante almacenamiento local.
-
-Además, permite poner en práctica conceptos de desarrollo Android como:
-
-* Desarrollo de interfaces.
-* Gestión de eventos.
-* Navegación entre pantallas.
-* Persistencia de datos.
-* Operaciones CRUD.
-* Búsqueda y filtrado.
-* Gestión y actualización de información.
-* Desarrollo de aplicaciones utilizando Java.
-
-## 🔄 Operaciones CRUD
-
-La aplicación permite realizar las principales operaciones sobre los videojuegos:
-
-| Operación  | Función                             |
-| ---------- | ----------------------------------- |
-| **Create** | Añadir un videojuego                |
-| **Read**   | Consultar los videojuegos guardados |
-| **Update** | Editar la información               |
-| **Delete** | Eliminar un videojuego              |
-
-## 👩‍💻 Autor
-
-**Vanesa Ribera Bautista**
-
-Proyecto desarrollado como aplicación Android utilizando **Java y Android Studio**.
+Proyecto de portfolio de **Vanesa Ribera Bautista** ([vanerb](https://github.com/vanerb)).
