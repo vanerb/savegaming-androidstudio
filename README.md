@@ -13,6 +13,18 @@ Diario de videojuegos para Android: cada vez que terminas un juego, guarda tu no
 - **Buscar y filtrar:** por nombre y por plataforma (PlayStation, PC, Xbox, Nintendo u otra).
 - **Editar y borrar:** cambiar cualquier dato de un juego o eliminarlo.
 
+### Capturas
+
+Las pantallas de la app están recreadas en la [página del proyecto](https://vanerb.github.io/savegaming-androidstudio/).
+
+**Página del proyecto**
+
+![Página de presentación de Save Gaming con la app en un móvil](docs/screenshots/pagina.webp)
+
+<p align="center">
+  <img src="docs/screenshots/movil.webp" alt="Página de presentación de Save Gaming en un móvil" width="280">
+</p>
+
 ## Demo
 
 La [página del proyecto](https://vanerb.github.io/savegaming-androidstudio/) recrea las pantallas principales de la app. Para usarla de verdad hay que instalarla en un móvil o un emulador, como se explica en [Puesta en marcha](#puesta-en-marcha). No tiene cuentas, así que no hace falta contraseña.
